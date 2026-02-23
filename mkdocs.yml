@@ -10,7 +10,8 @@ nav:
   
   - Getting Started:
     - Onboarding New Regions: onboarding.md
-  
+    - Multiregions: multiregions.md
+
   - Using the Map:
     - Map Layers & Filters: layers.md
     - Understanding Visuals: visuals.md
