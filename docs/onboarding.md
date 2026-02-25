@@ -24,6 +24,28 @@ The form collects the following critical information:
 | **Contact Info** | Your Discord username or Email address. This is required for administrators to contact you during the setup process. |
 | **Public Channels** | A list of public channels used in your mesh (e.g., `Chat`, `Emergency`). This helps the wardriving app correctly identify valid traffic. |
 | **Observer IDs** | The **Public ID** (e.g., `12345678XXXXXX...`) of the nodes acting as MQTT gateways. |
+| **Volunteer as Administrator** | Optional. Tick this to volunteer as your region's administrator. Requires Discord to be linked. See [below](#volunteer-as-region-administrator) for details. |
+
+## Volunteer as Region Administrator
+
+The onboarding form includes an optional **Volunteer as Region Administrator** checkbox.
+
+Enabling this option signals to the MeshMapper team that you are willing to take on the administrator role for your new region. As a region administrator, you would be responsible for:
+
+  - Monitoring and managing your region's data and settings.
+  - Supporting local wardrivers and answering questions about the map.
+  - Being an active and available point of contact for your mesh community.
+
+**Requirements:**
+
+  - You must **link your Discord account** before this option becomes available. The checkbox is disabled until Discord is connected.
+  - You must be genuinely active in your local mesh community.
+
+**What happens if you volunteer:**
+
+When your region is approved and deployed, an administrator account will be automatically created for you. Your credentials (username and a generated key) will be sent to you via Discord DM. You should log in to your region's admin panel and change your key immediately after first login.
+
+*If you already have an administrator account on another MeshMapper region, access to the new region will simply be added to your existing account.*
 
 ## Defining the Boundary
 
