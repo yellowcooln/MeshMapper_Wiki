@@ -36,6 +36,7 @@ Manage the repeaters database.
     - **Active:** The default state. The repeater is visible on the map, included in leaderboards, and actively associating with coverage pings.
     - **Disabled:** The repeater is hidden from the public map and leaderboards but remains in the database for historical purposes.
     - **Inactive:** The repeater hasn't sent an advert in the last 30 days and has been removed from from the map.
+    - **Pending:** The repeater has been discovered but is awaiting approval. Pending repeaters are **not** visible on the map and do not associate with coverage data. This state is only used when the "New Repeaters Enter Pending State" setting is enabled for the region. Admins can approve a pending repeater by editing it and setting its status to **Active**. Pending repeaters that have existed for 3× the stale timer will be automatically approved if still actively being heard, or deleted if not.
     - **Excluded:** The repeater is flagged as a duplicate. It appears as a **Red** icon on the map. Coverage data is **not** associated with this repeater to prevent skewing statistics (with the exception of **DISCOVERY** type pings).
 
     !!! warning "Duplicate Repeater Persistence"
@@ -108,6 +109,11 @@ Configure how the map behaves for your region.
   - **Max Session Capacity**: Limit the number of simultaneous wardrivers to prevent mesh congestion.
   - **Hide Companion Names**: Toggle privacy mode for the public map.
   - **Stale Repeater Age**: Set how many hours without an advert before a repeater is considered stale and visually flagged on the map (default: 24 hours). This threshold also drives the automatic duplicate cleanup routine — a colliding repeater that has not been heard in **3× this value** is eligible for automatic deletion. For example, with a 12-hour stale age, stale duplicates are removed after 36 hours of silence. [See Duplicate Repeater IDs](https://wiki.meshmapper.net/duplicaterepeaterid/)
+  - **New Repeaters Enter Pending State**: When enabled, newly discovered repeaters will enter a **Pending** state instead of **Active**. Pending repeaters are hidden from the map until an admin reviews and approves them. After 3× the stale timer, pending repeaters are automatically approved if still actively being heard, or deleted if not. In multiregion mode, this setting is configured per-region under Region-Specific Settings.
+
+    !!! warning "Data Inaccuracy Warning"
+        New repeaters will not display on the map until approved. This can cause data inaccuracies. Use with caution.
+
   - **Single Observer Mode**: Enable this if your region relies on a single MQTT ingestor to prevent repeaters from being flagged as "Stale" too quickly. This option prevents the repeater from displaying as stale and ultimately getting disabled at 30 days without an advert.
   - **Public Channels**: Define which channels are treated as public traffic.
   - **Regions/Scopes**: If your region uses MeshCore Regions/Scopes, define it here.  If not, leave the default scope of "*".
@@ -123,7 +129,7 @@ Configure how the map behaves for your region.
   
 ## Alerts & History
 
-  - **Alerts**: Automatically detects configuration issues, such as **Duplicate Repeater IDs** (Collisions).
+  - **Alerts**: Automatically detects configuration issues, such as **Duplicate Repeater IDs** (Collisions) and **Pending Repeaters** awaiting approval.
   - **History**: An audit log of all administrative actions (who edited what and when), ensuring accountability.
 
 ## Notifications
@@ -131,5 +137,6 @@ Configure how the map behaves for your region.
 Link your Discord to MeshMapper to receive DM's from the MeshMapper bot.
 
   - **Alert on Duplicate Repeater ID**: Notifies you when a repeater has sent an advert, but its ID collides with another, putting both repeaters into Excluded status.  [See Duplicate Repeater ID](https://wiki.meshmapper.net/duplicaterepeaterid)
+  - **Alert on Pending Repeater**: Once a day, receive a notification if your region has repeaters in **Pending** state that are awaiting review.  This notification is only relevant if "New Repeaters Enter Pending State" is enabled for the region.
   - **Allow Messages From Visitors**: When enabled, a map visitor can send a message to you directly from the "Region Info" page of your regions map.
   - **Alert on Offline Observer**: Once a day (around 0800 EST/EDT) MeshMapper will review all data received via your regions MQTT observers (pings, repeater adverts, companion adverts) for the past 7 days.  If a particular observer has sent data within that time, but not within the "Stale Repeater Age" time configured for your region, then this observer is potentially offline.  Receive an alert when this is the case.
