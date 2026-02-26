@@ -82,7 +82,7 @@ The **Administrators** tab displays all admin accounts that have been granted ac
 
   - **Name:** The username of the administrator account.
   - **Contact:** The contact information on file for the administrator (e.g., Discord handle, email).
-  - **Zone:** On multiregion admin panels, each administrator's entry will display which sub-regions they have been granted access to.
+  - **Region:** On multiregion admin panels, each administrator's entry will display which sub-regions they have been granted access to.
   - **Status:** Indicates whether the administrator has completed registration.
       - **Active:** The administrator has claimed their account and set a key.
       - **Pending Registration:** The administrator has been invited but has not yet claimed their account.
@@ -93,7 +93,7 @@ Region admins can invite new administrators directly from this tab by clicking *
 
   1. **Username** *(required)*: Choose a username for the new administrator. This must be unique.
   2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email) so they can be reached if needed.
-  3. **Zone Assignment** *(required)*: Select which zone the new administrator should have access to. On multiregion admin panels, you can assign the administrator to the multi-region group or to an individual sub-region.
+  3. **Region Assignment** *(required)*: Select which region the new administrator should have access to. On multiregion admin panels, you can assign the administrator to the multi-region group or to an individual sub-region.
 
 Once created, a message will display with a registration link and the username. Share both with the new administrator.
 
