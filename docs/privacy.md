@@ -66,7 +66,7 @@ MeshMapper integrates with the following third-party services:
 ## Data Retention
 
 - Coverage and session data is retained indefinitely to maintain historical map accuracy.
-- You may request deletion of your data by contacting an administrator.
+- You may request deletion of your data by contacting us at admin@meshmapper.net.s
 
 ## Your Rights
 
@@ -77,11 +77,11 @@ Depending on your jurisdiction, you may have the right to:
 - **Delete** your personal data (subject to legitimate retention needs)
 - **Object** to or restrict certain processing of your data
 
-To exercise any of these rights, please contact a regional or global administrator.
+To exercise any of these rights, please contact us at admin@meshmapper.net.
 
 ## Children's Privacy
 
-MeshMapper is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact an administrator so we can remove it.
+MeshMapper is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us at admin@meshmapper.net so we can remove it.
 
 ## Changes to This Notice
 
@@ -89,4 +89,4 @@ We may update this Privacy Notice from time to time. Changes will be reflected b
 
 ## Contact
 
-If you have questions about this Privacy Notice, please reach out via the MeshMapper Discord community or contact a administrator or developer.
+If you have questions about this Privacy Notice, please reach out via the MeshMapper Discord community or contact us at admin@meshmapper.net.
