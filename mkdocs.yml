@@ -49,6 +49,8 @@ nav:
     - January 30, 2026: release-notes/260130.md
     - January 29, 2026: release-notes/260129.md
 
+  - Privacy Policy: privacy.md
+
 # Theme Configuration
 theme:
   name:  material
