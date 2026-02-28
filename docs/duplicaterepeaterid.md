@@ -28,6 +28,7 @@ MeshMapper prioritizes data accuracy. If two repeaters share the ID `A1`, and a 
 
 ### 1. Detection & Quarantine
 When a new repeater appears on the network with an ID that is already in use by a different device:
+
   - **Both** repeaters (the existing one and the new one) are immediately flagged as **Excluded**.
   - The system assigns the new repeater a temporary internal ID (e.g., `X1`) to differentiate it in the database and map, but it remains linked to the collision.
   - Both repeaters are excluded from regional or global leaderboards and statistics (like maximum distance reached)
