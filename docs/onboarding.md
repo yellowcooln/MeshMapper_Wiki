@@ -53,20 +53,21 @@ One of the most important steps is defining the geographic boundary of your regi
 
   - **The Map Tool**: The form includes an interactive map with drawing tools.
   - **Draw Polygon**: You must use the **Polygon Tool** (pentagon icon) to draw a precise shape around your coverage area.
+  - **Region Center**: Drag the pin to a point within your region.  This will determine where your region appears on the global map.
   - **Purpose**: This polygon is used to:
-    - Filter out stray pings from outside the region.
+    - Define where wardriving activities in your region can occur.
     - Determine if a user is "In Zone" for authentication purposes.
     - Render the region border on the global map.
 
-*Note: Keep the boundary reasonable. You can always request an expansion later as your network grows.*
+*Note: Keep the boundary reasonable. You can always expand it later as your network grows.*
 
 ## Submission & Approval
 
 Once you submit the form:
 
-  - 1. **Notification**: A webhook immediately notifies the MeshMapper administrators of the new request.
-  - 2. **Review**: Admins will verify the Observer IDs and ensure they are successfully transmitting data to the MQTT broker.
-  - 3. **Activation**: Once verified, the region is approved. A new subdomain (e.g., `new.meshmapper.net`) is provisioned, and the database structures are automatically generated.
+  - 1. **Notification**: Administrators will receive a notification of the onboarding request.
+  - 2. **Review**: Admins will verify the Observer IDs and ensure they are successfully transmitting data to the MQTT broker at letsmesh.net.
+  - 3. **Activation**: Once verified, the region is approved and will become available for wardriving.  It can take up to 5 minutes after deployment for the MeshMapper MQTT engine to start pulling in local data.
 
 If you associated your Discord account during the onboarding process, you will receive automatic messages from MeshMapper with onboarding status.
 
