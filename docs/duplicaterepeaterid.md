@@ -1,6 +1,13 @@
+!!! success "Change is comining!"
+    With multi-byte repeater path functionality being actively developed by the MeshCore team, the below information will, thankfully, soon become irrelevant.
+
+    Until such a time, duplicate repeater ID's can be managed using the below methods, or by driving in Passive or Hybrid modes where **Discovery** packets are used.  **Discovery**, or **DISC**, packets associate with repeaters using their full Public ID.
+
 # Duplicate Repeater IDs
 
 As a regions mesh network grows, the likelihood of two repeaters sharing the same short identifier increases. MeshMapper has a robust system for detecting, handling, and resolving these "collisions" to ensure data integrity.
+
+MeshMapper does not filter out repeaters outside of a regions defined boundry, as that would not be an accurate representation of real-world RF conditions.
 
 !!! tip "Override Available"
     Regions now have the ability to override MeshMapper's default duplicate ID detection logic if they prefer to visualize all data regardless of ambiguity.
