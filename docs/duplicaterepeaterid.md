@@ -33,12 +33,6 @@ When a new repeater appears on the network with an ID that is already in use by 
   - The system assigns the new repeater a temporary internal ID (e.g., `X1`) to differentiate it in the database and map, but it remains linked to the collision.
   - Both repeaters are excluded from regional or global leaderboards and statistics (like maximum distance reached)
 
-## Workarounds
-Wardrivers can choose to collect data in **Passive** or **Hybrid** modes, which utilize **Discovery**, or **DISC**, packets.  You can think of these packets as broadcasting "Hello, who's out there?", and any repeater within hearing distance (and with compatible firmware) will respond with their full Public ID.  As we're not relying on only 2 hex characters to make the association to the repeater, associations can be made even if the first 2 characters of that particular repeater is in collision with another.
-
-!!! tip "Enforcce Hybrid Mode"
-    If a region is large and contains many duplicate ID's, region administrators can choose to "Enforce Hybrid Mode" for their region.  This will prevent any **Active** wardriving from occuring in the region by automatically enabling Hybrid mode for wardrivers.  The option is available in the regional admin panel.
-
 ### 2. Map Appearance
 
   - **Red Icons**: Both repeaters will appear on the map with **Red** icons (instead of the standard Pink, Orange or Grey).
@@ -50,6 +44,12 @@ Wardrivers can choose to collect data in **Passive** or **Hybrid** modes, which 
 
   - **Ambiguity**: If a ping is ingested containing a repeater that has a collision (e.g., via `A1`), MeshMapper cannot attribute that hop to a specific location with certainty.
   - **Data Integrity**: This data is forever flagged as being ambiguous, and will never associate with a repeater (even after the collision is resolved).
+
+## Workarounds
+Wardrivers can choose to collect data in **Passive** or **Hybrid** modes, which utilize **Discovery**, or **DISC**, packets.  You can think of these packets as broadcasting "Hello, who's out there?", and any repeater within hearing distance (and with compatible firmware) will respond with their full Public ID.  As we're not relying on only 2 hex characters to make the association to the repeater, associations can be made even if the first 2 characters of that particular repeater is in collision with another.
+
+!!! tip "Enforcce Hybrid Mode"
+    If a region is large and contains many duplicate ID's, region administrators can choose to "Enforce Hybrid Mode" for their region.  This will prevent any **Active** wardriving from occuring in the region by automatically enabling Hybrid mode for wardrivers.  The option is available in the regional admin panel.
 
 ## Resolution
 
