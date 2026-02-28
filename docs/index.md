@@ -18,7 +18,7 @@ It answers critical questions for mesh operators:
 
 Powerful administration options allow regions (or multiregion groups) to manage their own map and its data.  [See more about administration here.](https://wiki.meshmapper.net/admins/)
 
-## Core Principals
+## Core Principles
 
 MeshMapper was desiged to provide realistically reliable data without making assumptions
 
