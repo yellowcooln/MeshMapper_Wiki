@@ -59,7 +59,7 @@ Because different radios and antennas report different absolute noise values, Me
 
 #### How Calibration Works
 
-MeshMapper automatically calibrates each user's baseline:
+MeshMapper automatically calibrates each companion's baseline:
 
 1. After enough data has been collected (at least 5 readings), MeshMapper calculates the companions's **10th percentile** noise floor — essentially the quietest conditions that companion typically experiences.
 2. This becomes the companions's personal **baseline**.
