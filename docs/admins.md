@@ -49,6 +49,10 @@ Manage the repeaters database.
   - **Ping Calc:** A tool to recalculate the total number of pings a repeater has handled.
   - **Notes:** Clicking the note icon will allow you to optionally add a note to the repeater.  On multiregion admin panels, if a repeater belongs to multiple single regions, notes will be combined and edits will be saved to the individual regions.
   - **Lock GPS Coordinates:** Enabling this setting will prevent new adverts from a repeater from updating its location.  This can be used in instances where the GPS coordinates set on the repeater are incorrect and need to be manually overridden.
+  - **Bulk Select & Edit/Delete:** Use the checkboxes on each row (or the "Select All" checkbox in the header) to select multiple repeaters. A toolbar will appear at the bottom of the screen with options to **Edit Selected** or **Delete Selected**. Bulk edit allows you to change Status, Power, Lock GPS, and Notes for all selected repeaters at once — each field has an "Apply" checkbox so you only change the fields you intend to. Works across multi-region admin panels.
+
+    !!! warning "Bulk Notes"
+        Bulk editing the Notes field will **overwrite** existing notes for all selected repeaters.
 
     !!! warning "Data Inaccuracy Warning"
 
@@ -63,6 +67,7 @@ Manage the "Phonebook" of known companions.
   - **Identity:** Map a Public ID (e.g., `12345678...`) to a human-readable Name.
   - **Blocking:** Set a companion's status to **Blocked** to prevent them from uploading data to the map.
   - **Notes:** Clicking the note icon will allow you to optionally add a note to the companion.  On multiregion admin panels, if a repeater belongs to multiple single regions, notes will be combined and edits will be saved to the individual regions.
+  - **Bulk Select & Edit/Delete:** Same multi-select functionality as repeaters. Bulk edit allows you to change Status and Notes for all selected companions at once.
 
 ### Sessions
 A historical log of all wardriving sessions.
@@ -91,11 +96,11 @@ The **Administrators** tab displays all admin accounts that have been granted ac
 
 Region admins can invite new administrators directly from this tab by clicking **+ Add Administrator**.
 
-  1. **Username** *(required)*: Choose a username for the new administrator. This must be unique.
-  2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email) so they can be reached if needed.
+  1. **Username** *(required)*: Choose a username for the new administrator. As you type, the system will check if the username already exists. If the administrator already has an account, a notice will appear and the form will switch to "Grant Access" mode — submitting will add your region to their existing access instead of creating a new account.
+  2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email) so they can be reached if needed. If the username already exists, this field will auto-populate with their current contact info.
   3. **Region Assignment** *(required)*: Select which region the new administrator should have access to. On multiregion admin panels, you can assign the administrator to the multi-region group or to an individual sub-region.
 
-Once created, a message will display with a registration link and the username. Share both with the new administrator.
+For **new administrators**, a message will display with a registration link and the username. Share both with the new administrator. For **existing administrators**, a confirmation will display that access to the region has been granted — no registration link is needed.
 
 #### Registration
 
@@ -118,6 +123,14 @@ The **Tools** tab contains powerful utilities for bulk operations. **Use with ca
   - **Bulk Update**:
     - Mass-edit attributes for a set of pings.
     - *Example:* Change all pings from companion "Tom_Mobile" on "Dec 25th" to have "External Antenna = YES".
+
+  - **Reassociate Repeater**:
+    - Reassociate pings to a repeater that was missing from the map at the time of ingestion, or whose GPS coordinates were incorrect.
+    - Select a repeater and click "Analyze & Preview" to see how many pings would be affected. The tool detects ID collisions automatically — if the repeater's short ID collides with another active repeater, only DISC pings (matched by full public key) will be processed.
+    - Pings that already have the correct coordinates (within ~100m) are skipped.
+
+    !!! warning "Use With Caution"
+        Reassociating pings to the wrong repeater location will result in misrepresented data. Always verify the repeater's GPS coordinates are correct before running this tool.
 
 ## System Settings
 
@@ -144,6 +157,13 @@ Configure how the map behaves for your region.
     - *Warning:* This compromises data accuracy. A warning badge will be displayed on the public map, and the region will be excluded from global leaderboards.
     - [Learn more about overriding duplicate detection](https://wiki.meshmapper.net/overrideduplicates/)
   
+## User Settings
+
+The **User Settings** tab allows administrators to manage their own account.
+
+  - **Change Key**: Update your admin login key.
+  - **Contact Info**: Update your contact information (e.g., Discord handle, email). This is displayed to all users.
+
 ## Alerts & History
 
   - **Alerts**: Automatically detects configuration issues, such as **Duplicate Repeater IDs** (Collisions) and **Pending Repeaters** awaiting approval.
