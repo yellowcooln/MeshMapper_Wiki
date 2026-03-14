@@ -21,6 +21,7 @@ nav:
   - Community:
     - Leaderboards & Statistics: leaderboards.md
     - Profiles & Awards: awards.md
+    - Map Embedding: embedding.md
   
   - Administration:
     - Administrator List: administratorlist.md
