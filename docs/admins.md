@@ -150,6 +150,7 @@ Configure how the map behaves for your region.
   - **Public Channels**: Define which channels are treated as public traffic.
   - **Regions/Scopes**: If your region uses MeshCore Regions/Scopes, define it here.  If not, leave the default scope of "*".
   - **Enforce Hybrid Mode**: Disables Active mode for wardrivers in your region.  If your regions mesh has an issue with dropped packets due to high mesh traffic or many wardrivers, consider enabling this option.  *(Mobile app functionality will be available with v1.1.0)*
+  - **Consider Failed DISC as DROP**: When disabled, Discovery pings that do not receive a reply will not appear on the map.  When enabled, Discovery pings that do not will receive a reply will display as DROP (red) on the map.
   - **Minimum Active/Hybrid Mode Interval**: Optionally set the number of seconds between mesh pings for wardrivers in your region.  If your regions mesh has an issue with dropped packets due to high mesh traffic or many wardrivers, consider setting a higher minimum interval.  *(Mobile app functionality will be available with v1.1.0)*
   - **Region Message**: Optionally add a message here that will display to map visitors when they click the "Region Info" option.  Direct guests to your Discord server, website, etc.  Field is plain-text and will automatically convert URLs to clickable links.
   - **Social Media Links**: Optionally add any number of social media or website links that will display on the "Region Info" window on your regions map.
