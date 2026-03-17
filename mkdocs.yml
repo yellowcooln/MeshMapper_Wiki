@@ -26,6 +26,7 @@ nav:
   - Administration:
     - Administrator List: administratorlist.md
     - Admin Portal: admins.md
+    - Coverage API: coverage-api.md
     - Data Upload: dataupload.md
   
   - Support:
