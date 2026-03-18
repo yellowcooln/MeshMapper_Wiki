@@ -78,14 +78,14 @@ For serial connections, the script will automatically detect connected devices. 
 
 Enter your region's **3-letter IATA code** (e.g., `SEA`, `LAX`, `YOW`, `LON`). This identifies which MeshMapper region your observer belongs to.
 
-### 7. JWT Token Configuration (Optional)
+### 7. Owner Information (Optional)
 
 You may optionally configure:
 
   - **Owner Public Key**: The public key of the observer owner (64 hex characters)
   - **Owner Email**: Contact email for the LetsMesh Analyzer
 
-These are optional, apply to LetsMesh only, and can be skipped.
+These are optional, apply to LetsMesh only, and can be skipped if you wish.
 
 ### 8. MQTT Broker Configuration
 
