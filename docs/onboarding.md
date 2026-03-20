@@ -9,7 +9,7 @@ Before requesting a new region, you must ensure the local infrastructure is read
   - **Active Mesh Community**: There should be an active group of users in the area.
   - **MQTT Observers**: You need at least one (preferably 2-3) nodes configured as **MQTT Clients** connected to the **LetsMesh** broker, the **MeshMapper** broker, or both.
     - These nodes act as the "ears" of the map, reporting traffic to MeshMapper.
-    - See [MeshMapper MQTT Setup](mqtt-setup.md) for detailed instructions.
+    - See [MeshMapper MQTT Setup](mqtt-main.md) for detailed instructions.
 
 ## The Onboarding Form
 
