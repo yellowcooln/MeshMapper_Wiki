@@ -60,12 +60,14 @@ When you tap a device, MeshMapper runs through nine steps automatically. You can
 MeshMapper uses a zone-based authentication system. The server checks your GPS coordinates and tells you which zone you are in (if any). Each zone has a code (like "YOW" for Ottawa) and a set of rules configured by the regional admin:
 
 **Session permissions:**
+
 - **TX Allowed**: Whether you can send channel messages. If at TX capacity, you are limited to Passive Mode only.
 - **RX Allowed**: Whether passive reception is permitted
 - **TX Slots Available**: How many active wardrivers the zone can support simultaneously
 - **Session Expiry**: When your session expires (automatically refreshed via heartbeat)
 
 **Regional configuration:**
+
 - **Scope**: Flood scope for the zone. When set, your TX channel messages are scoped to that region instead of flooding the entire global mesh. Shown on the Connect tab (e.g., "#ottawa"). If no scope is set, it shows "Global." Applied automatically by setting a transport key on your radio.
 - **Channels**: Additional channels configured by the regional admin (e.g., regional monitoring channels)
 - **Enforce Hybrid**: Whether Hybrid Mode is mandatory for the zone. When enforced, the Hybrid Mode toggle in Settings is locked.
