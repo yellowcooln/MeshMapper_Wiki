@@ -67,11 +67,14 @@ One of the most important steps is defining the geographic boundary of your regi
 
 Once you submit the form:
 
-  - 1. **Notification**: Administrators will receive a notification of the onboarding request.
-  - 2. **Review**: Admins will verify the Observer IDs and ensure they are successfully transmitting data to the MQTT broker at letsmesh.net.
-  - 3. **Activation**: Once verified, the region is approved and will become available for wardriving.  It can take up to 5 minutes after deployment for the MeshMapper MQTT engine to start pulling in local data.
+  - 1. **MQTT Verification**: MeshMapper servers will verify if MQTT-connected observers are sending data to the brokers at either letsmesh.net or MeshMapper (or both).
+  - 2. **Review**: If the servers are able to verify active observers, the region is presented to MeshMapper administrators for review.  Administrators will ensure the region isn't a duplicate, is named correctly, notes entered during onboarding are reviewed, etc.
+  - 3. **Activation**: Once reviewed, the region is approved and will become available for wardriving.  It can take up to 5 minutes after deployment for the MeshMapper MQTT engine to start pulling in local data.
 
 If you associated your Discord account during the onboarding process, you will receive automatic messages from MeshMapper with onboarding status.
+
+!!! info "Request Deletion"
+    Pending onboarding requests that have not passed MQTT verification in 3 days will automatically be deleted.
 
 ## Legacy Data
 
