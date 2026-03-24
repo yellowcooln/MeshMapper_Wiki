@@ -61,7 +61,7 @@ No channel messages (no mesh flooding at all). Sends **discovery requests** ever
 
 1. Every 30 seconds, sends a zero-hop discovery request (direct query, not a broadcast)
 2. Repeaters/rooms respond with node type, public key, and signal quality (local + remote SNR/RSSI)
-3. Discovery Tracker collects responses during a 5-second window, deduplicates by public key, and filters carpeaters
+3. Discovery Tracker collects responses during a 5-second window, deduplicates by public key, and filters carpeaters (RSSI stronger than -30 or by user-configured prefix value)
 4. Unified RX Handler monitors for mesh traffic on subscribed channels
 5. All discovery responses and RX observations queued for upload
 

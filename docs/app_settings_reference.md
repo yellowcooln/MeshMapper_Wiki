@@ -37,7 +37,7 @@ Complete reference for every setting in MeshMapper, organized by section.
 
 ### Anonymous Mode
 
-- Renames your companion device to **"Anonymous"** on the mesh
+- Renames your companion device to **"Anonymous"** on the mesh (requires a clean disconnect to reset your node name)
 - Changing while connected triggers a brief reconnection
 - Confirmation dialog when enabling or disabling while connected
 - Cannot change while auto-ping is running
@@ -116,7 +116,7 @@ If you're wardriving with a repeater mounted in your vehicle or nearby ("CARpeat
 
 ### Disable RSSI Filter
 
-By default, the app drops any packet with RSSI ≥ -30 dBm because a signal that strong almost certainly came from a co-located repeater, not meaningful coverage. Only disable this if you are certain no co-located repeater is within range. If disabled while a CARpeater is present, your device will report false coverage data to the MeshMapper community map, degrading accuracy for everyone.
+By default, the app drops any packet with RSSI equal to or stronger (closer to 0) than -30 dBm because a signal that strong almost certainly came from a co-located repeater and is not meaningful coverage data. Only disable this if you are certain no co-located repeater is within range. If disabled while a CARpeater is present, your device will report false coverage data to the MeshMapper community map, degrading accuracy for everyone.
 
 - Default: Drops packets with RSSI ≥ -30 dBm (carpeater threshold)
 - Enabling allows **all signal strengths** through

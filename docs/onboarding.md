@@ -53,7 +53,7 @@ When your region is approved and deployed, an administrator account will be auto
 One of the most important steps is defining the geographic boundary of your region.
 
   - **The Map Tool**: The form includes an interactive map with drawing tools.
-  - **Draw Polygon**: You must use the **Polygon Tool** (pentagon icon) to draw a precise shape around your coverage area.
+  - **Draw Polygon**: Use the **Polygon Tool** (pentagon icon) to draw a precise shape around your mesh's coverage area if a circle  doesn't accurately describe it.
   - **Import GeoJSON**: Alternatively, click the **Import GeoJSON** button to paste GeoJSON data directly. This is useful if you already have a boundary defined in another tool (e.g., [geojson.io](https://geojson.io)). Supported formats include `Polygon`, `MultiPolygon`, `Feature`, and `FeatureCollection`.
   - **Region Center**: The center pin automatically moves to the center of the polygon when one is drawn or imported. You can also drag the pin manually if needed. This determines where your region appears on the global map.
   - **Purpose**: This polygon is used to:
