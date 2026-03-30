@@ -26,7 +26,7 @@ MeshMapper was desiged to provide realistically reliable data without making ass
   - **Association:** For every data point, repeaters involved in its transmission are associated based on their GPS coordinates.  **If a repeater is ever relocated, all links to its coverage data are broken** to ensure actual coverage is not skewed.
   - **Authentication:** Every wardriving session is validated against known mesh nodes.
 
-MeshMapper believes in the ownership and control of how a regions data is presented lies with the region itself.  If a region chooses to bypass logic to limit false or misleading data, that is their choice, and visitors to their map will be warned as such.
+MeshMapper believes in the ownership and control of how a regions data is presented lies with the region itself.  If a region chooses to bypass logic designed to limit false or misleading data, that is their choice, and visitors to their map will be warned as such.  Repeater owners can easily [opt out of being publicly listed](https://wiki.meshmapper.net/layers/#private-repeaters) on the map.
 
 ## The Wardriving App
 

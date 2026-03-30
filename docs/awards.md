@@ -40,7 +40,7 @@ These are granted automatically by the system based on wardriving milestones:
 
 ### Manual Awards
 
-Administrators can grant custom awards for special achievements, events, contest wins, donating to MeshMapper, or community contributions.
+Master/Global Administrators can grant custom awards for special achievements, events, contest wins, donating to MeshMapper, or community contributions.
 
 ## Available Awards
 

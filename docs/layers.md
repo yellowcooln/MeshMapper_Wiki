@@ -50,12 +50,12 @@ These layers display the actual mesh network data. You can toggle them on or off
 
 | Layer Name | Description |
 | --- | --- |
-| **BIDIR** | **Green** grid squares showing confirmed two-way coverage. |
-| **TX** | **Orange** grid squares where packets were sent but no confirmation was received. |
-| **RX** | **Purple** grid squares where packets were heard but no transmission occurred. |
+| **BIDIR** | **Green** grid squares showing confirmed two-way coverage (the sender heard a repeat AND the packet was also heard by at least one observer after being repeated). |
+| **TX** | **Orange** grid squares where packets were sent but no confirmation was received (no repeat heard by the sender but the packet was repeated and heard by at least one observer). |
+| **RX** | **Purple** grid squares where other repeated mesh traffic was heard by the meshmapper companion. |
 | **DISC / TRACE** | **Cyan** grid squares showing Node Discovery and Trace packets. |
-| **DEAD** | **Grey** grid squares where a repeater heard the ping, but it didn't route further. |
-| **DROP** | **Red** grid squares showing failed pings (no route, no repeats). |
+| **DEAD** | **Grey** grid squares where a repeater heard the ping, but it didn't route further (sender heard a repeat but no observer did). |
+| **DROP** | **Red** grid squares showing failed pings (neither the sender nor any observers heard repeats of the packet). |
 | **Repeaters** | The icons representing repeater nodes. |
 | **Repeater Coverage** | When a repeater is clicked, this layer draws dashed blue lines to all locations where that repeater was heard. Useful for visualizing the effective footprint of a specific repeater. |
 | **Adv. Repeater Coverage** | Similar to standard Repeater Coverage, but colour-codes the lines and grid squares based on the connection type (Green=BIDIR, Orange=TX, etc.) instead of using a uniform blue. Lines are labelled as **In** or **Out** to indicate whether the ping originated inside or outside the region boundary. |
@@ -76,18 +76,18 @@ The **Noise Heatmap** is an optional overlay that visualizes the RF noise enviro
 
 Every companion reports a **noise floor** reading (in dBm) with each ping it submits. The noise floor represents the level of background RF interference the radio is experiencing at that location. A reading closer to 0 dBm is "loud" (lots of interference), while a very negative value like -120 dBm is "quiet."
 
-Because different radios and antennas report different absolute noise values, MeshMapper doesn't display the raw readings directly. Instead, it calculates a **noise delta** — how much louder or quieter a location is compared to that user's personal baseline.
+Because different radios and antennas report different absolute noise values, MeshMapper doesn't display the raw readings directly. Instead, it calculates a **noise delta** — how much louder or quieter a location is compared to that device's baseline.
 
 #### How Calibration Works
 
 MeshMapper automatically calibrates each companion's baseline:
 
 1. After enough data has been collected (at least 5 readings), MeshMapper calculates the companions's **10th percentile** noise floor — essentially the quietest conditions that companion typically experiences.
-2. This becomes the companions's personal **baseline**.
+2. This becomes the companions's **baseline**.
 3. Every data point is then scored as a **delta** (difference) from that baseline.
-4. Every day a new calibration is done to update that companions noise delta.
+4. Every day a new calibration is done to update that companion's noise delta.
 
-For example, if your companion's baseline is **-110 dBm** and you submit a reading of **-90 dBm**, the delta is **+20** — meaning that location is 20 dB noisier than your typical quiet conditions.
+For example, if your companion's baseline is **-110 dBm** and you submit a reading of **-90 dBm**, the delta is **+20** — meaning that location is 20 dB (100X) noisier than your device sees under typical quiet conditions.
 
 This per-companion calibration ensures that readings from different hardware/setups are comparable on the same map.  All readings for a single location are averaged and displayed accordingly.
 
