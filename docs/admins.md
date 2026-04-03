@@ -203,6 +203,7 @@ The **Region Boundary** section allows you to view and edit the geographic bound
   - **Import GeoJSON**: Click the **Import GeoJSON** button to paste GeoJSON data from an external source (e.g., [geojson.io](https://geojson.io)). Supported formats include `Polygon`, `MultiPolygon`, `Feature`, and `FeatureCollection`.
   - **Center Pin**: The center pin automatically moves to the center of the polygon when one is drawn or imported. You can also drag it manually. This determines where the region appears on the global map.
   - **Lat / Lon / Radius**: The latitude, longitude, and radius fields are used as a fallback if no polygon is defined. If a polygon is drawn, it takes precedence over the radius.
+  - **Auto Generate Boundry**: Use this option to have AI attempt to draw your regions boundry for you.
 
 ## User Settings
 

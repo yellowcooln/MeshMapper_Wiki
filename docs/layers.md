@@ -115,7 +115,7 @@ Regions with imported historical data will have a **Legacy** layer available. Th
 
 ### Line of Sight
 
-The **Line of Sight** tool is available from the map toolbar and allows you to check terrain clearance between two points on the map. Click to place two points (or click directly on repeaters) and MeshMapper will fetch the elevation profile and show whether the path is clear or obstructed. When a repeater is selected as one of the endpoints, you can adjust its elevation above ground for more accurate results.
+The **Line of Sight** tool is available from the map toolbar and allows you to check terrain clearance between any number of points on the map. Click to place two (or more) points (or click directly on repeaters) and MeshMapper will fetch the elevation profile and show whether the path is clear or obstructed. When a repeater is selected as one of the endpoints, you can adjust its elevation above ground for more accurate results.
 
 ### View in 3D (Beta)
 
