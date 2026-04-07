@@ -86,6 +86,7 @@ nav:
     - January 30, 2026: release-notes/260130.md
     - January 29, 2026: release-notes/260129.md
 
+  - Frequently Asked Questions: faq.md
   - Privacy Policy: privacy.md
 
 # Theme Configuration
@@ -100,6 +101,7 @@ theme:
 markdown_extensions:
   - attr_list
   - admonition
+  - pymdownx.details
   - md_in_html
   - pymdownx.blocks.caption
   - toc:
