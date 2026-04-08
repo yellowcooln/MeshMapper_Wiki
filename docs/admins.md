@@ -225,3 +225,5 @@ Link your Discord to MeshMapper to receive DM's from the MeshMapper bot.
   - **Alert on Pending Repeater**: Once a day, receive a notification if your region has repeaters in **Pending** state that are awaiting review.  This notification is only relevant if "New Repeaters Enter Pending State" is enabled for the region.
   - **Allow Messages From Visitors**: When enabled, a map visitor can send a message to you directly from the "Region Info" page of your regions map.
   - **Alert on Offline Observer**: Once a day (around 0800 EST/EDT) MeshMapper will review all data received via your regions MQTT observers (pings, repeater adverts, companion adverts) for the past 7 days.  If a particular observer has sent data within that time, but not within the "Stale Repeater Age" time configured for your region, then this observer is potentially offline.  Receive an alert when this is the case.
+
+Webhooks can also be configured per-region to send these same notifications to any HTTPS endpoint (Slack, Home Assistant, custom automation, etc.). See [Webhooks](https://wiki.meshmapper.net/webhooks) for setup instructions.
