@@ -14,6 +14,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - If the repeater or observer was recently added, give it a few minutes to be picked up.
     - Ensure the repeater has location coordinates configured.
     - The region may have the option "New Repeaters Enter Pending State" enabled (check through the **Region Info** page), in which event the region administrator will need to approve the repeater before it is added.
+    - Repeaters that are well outside of a regions defined radius may not get added to the map as an anti-spam/anti-misconfiguration measure.  Please check with your region's administrator.
 
     If your repeater or room server is also an observer, it may not "hear" its own advert.  Another observer must be within range in order to ingest it's advert and display on the map.  If there are no other observers nearby, you can mimic the repeaters advert from a companion by using the MeshCore app, select the ellipses beside the repeater, select "Share", and then select "Zero Hop Advert".  When this is the case, however, this repeater will eventually become stale and get removed.  This process must be repeated regularly.
 
