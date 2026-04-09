@@ -214,7 +214,10 @@ The **User Settings** tab allows administrators to manage their own account.
 
 ## Alerts & History
 
-  - **Alerts**: Automatically detects configuration issues, such as **Duplicate Repeater IDs** (Collisions) and **Pending Repeaters** awaiting approval.
+  - **Alerts**: Automatically detects configuration issues, including:
+      - **Repeater Clock Alerts**: Repeaters whose embedded timestamp differs from the server time by more than 120 seconds. An incorrect clock can affect packet routing and deduplication.
+      - **Duplicate Repeater IDs** (Collisions): Multiple repeaters sharing the same short public ID.
+      - **Pending Repeaters**: Repeaters awaiting approval (when "New Repeaters Enter Pending State" is enabled).
   - **History**: An audit log of all administrative actions (who edited what and when), ensuring accountability.
 
 ## Notifications

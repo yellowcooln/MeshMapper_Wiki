@@ -149,6 +149,7 @@ Clicking the **Options** button (tune icon) next to the search bar opens the Adv
   - **Quick Time**: Filter data by age (Last 30 Days, 90 Days, 1 Year, or All Time).
   - **Tx Power**: Filter by transmit power (0.3W, 0.6W, 1.0W).
   - **Ext. Ant.**: Toggle to show only data points collected with an external antenna.
+  - **Display Only Repeaters With Incorrect Time**: Toggle to filter the map to only show repeaters whose embedded clock is off by more than 120 seconds. Useful for identifying repeaters that need their time set correctly.
   - **User**: Filter pings by the username of the wardriver (if enabled for the region).
   - **Repeater Name / ID**: Search for specific repeaters by name or the first 2 characters of its Public ID.
   - **Ping contains repeater name or ID**: Find pings that routed through or were heard from a specific repeater by its name or ID. This filter automatically excludes pings associated with duplicate repeater IDs or known collisions and displays a warning message when this occurs.
