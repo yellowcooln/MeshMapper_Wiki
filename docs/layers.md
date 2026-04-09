@@ -74,14 +74,14 @@ These layers display the actual mesh network data. You can toggle them on or off
 | **Effective Coverage** | Filters the map to show only locations with confirmed reliable connectivity, removing noise and edge-case pings for a cleaner view of where the mesh truly delivers. Each ping type is given a numerical value (BIDIR being the highest and DROP being the lowest) and these values are averaged across each grid square.|
 | **Signal Strength** | Colour-codes coverage grid squares by signal strength (SNR), making it easy to identify strong and weak zones across the map at a glance. ≤ -1 dB displays in red and ≥ 5 dB in green, with everything else in between. |
 | **Ping Age** | Colour-codes grid squares based on how recently they were last pinged. Green indicates recent activity and red indicates stale coverage. The green and red age thresholds are adjustable from the Settings panel, making it easy to identify areas that may need remapping. |
-| **Noise Heatmap** | A visual heatmap representing the RF noise environment. **Red** areas indicate high interference, while **Blue** areas are quieter. See [Noise Heatmap](#noise-heatmap) below for details. |
+| **Noise Floor** | A coverage mode that colour-codes grid squares by RF noise level. **Green** = quiet, **Red** = loud. Select it from the **Coverage Mode** section. See [Noise Floor](#noise-floor) below for details. |
 | **Neighbor Zones** | Small pins showing the location of nearby MeshMapper regions. Clicking them will take you to that map. |
 | **Neighbour Zone Boundaries** | Draws a dashed outline showing the official boundary (polygon or radius) of each neighbouring region. Requires **Neighbor Zones** to be enabled — it will be automatically turned off when Neighbor Zones is disabled, and restored when it is re-enabled. |
 | **Region Boundary** | A black outline showing the official area covered by the current map zone. |
 
-### Noise Heatmap
+### Noise Floor
 
-The **Noise Heatmap** is an optional overlay that visualizes the RF noise environment across the map. It helps identify areas with high interference versus quiet areas with clean signal conditions.
+The **Noise Floor** coverage mode visualizes the RF noise environment across the map by colour-coding grid squares. It helps identify areas with high interference versus quiet areas with clean signal conditions.
 
 #### What It Shows
 
@@ -93,30 +93,31 @@ Because different radios and antennas report different absolute noise values, Me
 
 MeshMapper automatically calibrates each companion's baseline:
 
-1. After enough data has been collected (at least 5 readings), MeshMapper calculates the companions's **10th percentile** noise floor — essentially the quietest conditions that companion typically experiences.
-2. This becomes the companions's **baseline**.
+1. After enough data has been collected (at least 5 readings), MeshMapper calculates the companion's **10th percentile** noise floor — essentially the quietest conditions that companion typically experiences.
+2. This becomes the companion's **baseline**.
 3. Every data point is then scored as a **delta** (difference) from that baseline.
 4. Every day a new calibration is done to update that companion's noise delta.
 
 For example, if your companion's baseline is **-110 dBm** and you submit a reading of **-90 dBm**, the delta is **+20** — meaning that location is 20 dB (100X) noisier than your device sees under typical quiet conditions.
 
-This per-companion calibration ensures that readings from different hardware/setups are comparable on the same map.  All readings for a single location are averaged and displayed accordingly.
+This per-companion calibration ensures that readings from different hardware/setups are comparable on the same map. All readings for a single location are averaged and displayed accordingly.
 
 #### Reading the Colours
 
-The heatmap uses a gradient from cool to warm colours:
+Grid squares are colour-coded on a gradient from green to red:
 
 | Colour | Meaning |
 | --- | --- |
-| **Blue** | Quiet — at or near the companions's baseline noise level. |
-| **Green / Lime** | Moderate — some elevated noise above baseline. |
+| **Green** | Quiet — at or near the companion's baseline noise level. |
+| **Yellow** | Moderate — some elevated noise above baseline. |
 | **Red** | Loud — significantly above baseline, indicating high interference. |
 
-!!! tip
-    The Noise Heatmap is **off by default**. Enable it from the Layer Control (stack icon) in the top-right corner of the map. It works best when zoomed in to a neighborhood or specific area of interest.
+A **Noise Floor** legend appears in the bottom-right of the map when this mode is active, showing the gradient scale from Quiet to Loud.
 
-!!! note
-    For privacy, heatmap coordinates are rounded to approximately 100-meter precision, so the heatmap shows general area trends rather than exact locations.
+Like the other coverage modes, Noise Floor fully supports the [colour vision accessibility options](#accessibility), so all colour blindness palettes apply to noise grid squares and the legend.
+
+!!! tip
+    To enable, select **Noise Floor** from the **Coverage Mode** section in the Layer Control (stack icon) in the top-right corner of the map.
 
 ### Legacy Data Layer
 
