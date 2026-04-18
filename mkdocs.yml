@@ -39,6 +39,7 @@ nav:
     - Leaderboards & Statistics: leaderboards.md
     - Profiles & Awards: awards.md
     - Map Embedding: embedding.md
+    - Bot Commands: botcommands.md
   
   - Administration:
     - Administrator List: administratorlist.md
