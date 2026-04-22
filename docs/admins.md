@@ -212,6 +212,7 @@ The **User Settings** tab allows administrators to manage their own account.
 
   - **Change Key**: Update your admin login key.
   - **Contact Info**: Update your contact information (e.g., Discord handle, email). This is displayed to all users.
+  - **API Access**: Generate or manage your Coverage API key. Each admin is allowed one key per region with a fixed rate limit of 100 requests per day. A description/reason is required when generating a key. Use **Regenerate** to replace an existing key (the old key stops working immediately). See [Coverage API](coverage-api.md) for usage details.
 
 ## Alerts & History
 
