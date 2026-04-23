@@ -37,7 +37,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - **Standard**: Colours represent ping type (green=BIDIR, orange=TX, purple=RX, etc.)
     - **Effective Coverage**: Averaged quality score (green=high quality, red=low quality)
     - **Signal Strength**: Based on SNR (green=strong, red=weak)
-    - **Ping Age**: Based on data recency (green=recent, red=stale)(green
+    - **Ping Age**: Based on data recency (green=recent, red=stale)
     - **Noise Floor**: Based on RF noise relative to each companion's baseline (green=quiet, red=loud)
 
     Check which mode is selected in the **Coverage Mode** section of the Layer Control.
