@@ -133,18 +133,20 @@ The **Administrators** tab displays all admin accounts that have been granted ac
 
 Region admins can invite new administrators directly from this tab by clicking **+ Add Administrator**.
 
-  1. **Username** *(required)*: Choose a username for the new administrator. As you type, the system will check if the username already exists. If the administrator already has an account, a notice will appear and the form will switch to "Grant Access" mode — submitting will add your region to their existing access instead of creating a new account.
-  2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email) so they can be reached if needed. If the username already exists, this field will auto-populate with their current contact info.
+  1. **Username** *(required)*: Choose a username for the new administrator. If the administrator already has an account, a notice will appear and the form will switch to "Grant Access" mode — submitting will add your region to their existing access.
+  2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email).
   3. **Region Assignment** *(required)*: Select which region the new administrator should have access to. On multiregion admin panels, you can assign the administrator to the multi-region group or to an individual sub-region.
 
-For **new administrators**, a message will display with a registration link and the username. Share both with the new administrator. For **existing administrators**, a confirmation will display that access to the region has been granted — no registration link is needed.
+For **new administrators**, an invite link will be generated. Copy the link and send it to the new administrator. Invite links expire after **7 days**. For **existing administrators**, a confirmation will display that access to the region has been granted — no invite link is needed.
+
+Pending invites are displayed below the administrators table, showing the username, region, who sent the invite, and when it expires. Invites can be deleted before they are claimed.
 
 #### Registration
 
-New administrators claim their account by visiting [register.meshmapper.net](https://register.meshmapper.net) and entering the username provided to them. If the account exists and has not yet been registered, a **temporary key** will be generated and displayed.
+New administrators claim their account by visiting the invite link sent to them. The link opens a confirmation page showing their username, assigned region, and who invited them. Clicking **Accept Invite & Create Account** generates their password.
 
-!!! warning "Temporary Key"
-    The temporary key is shown **only once** during registration. The new administrator must copy it immediately. After logging in for the first time, they should change their key from the **User Settings** tab.
+!!! warning "Password"
+    The password is shown **only once** during registration. The new administrator must copy it immediately. After logging in for the first time, they can change their password from the **User Settings** tab.
 
 ## Maintenance Tools
 

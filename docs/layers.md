@@ -29,6 +29,12 @@ The **Settings** menu (gear icon in the navigation bar) provides global options 
 *   **Grid Size**: Select the physical size of coverage grid squares. Options range from **50m** to **2km**, with the default being **300m** (Simplified) or **100m** (Detailed). Click to open a dropdown and select the desired size. Changing this setting reloads the map. Labels adjust automatically when switching between Metric and Imperial units.
 *   **Info Panel**: Switch between **Sidebar** and **Popup** mode for viewing ping details.
 *   **Hide Data from Missing Repeaters**: When enabled, hides coverage grid squares that reference repeaters no longer present on the map, reducing visual noise from outdated or removed infrastructure.
+*   **Follow My Location**: When enabled, the map continuously tracks your GPS position and re-centres on it every 5 seconds. Your current zoom level is preserved — only the centre point updates. A blue dot and accuracy circle show your position. Useful for wardriving or moving through a coverage area. Toggle it off to stop tracking; the marker stays at your last known position.
+*   **Default Zoom**: Set a preferred zoom level that the map loads at. Options range from Street (14) to Region (8).
+
+### My Location
+
+The **My Location** button (crosshair icon on the right side of the map) performs a one-time GPS lookup and centres the map on your current position. This works independently of the Follow My Location setting — it's a quick "where am I?" without continuous tracking.
 
 ### Accessibility
 
@@ -171,6 +177,9 @@ Clicking the **Options** button (tune icon) next to the search bar opens the Adv
   - **SNR Range**: Filter pings based on Signal-to-Noise Ratio (Min/Max).
   - **Distance Range**: Filter pings based on distance from the heard repeater (Min/Max meters).
   - **Date Range**: Specify a custom start and end date for the data.
+
+!!! tip "Filters preserve your map position"
+    Applying, resetting, or changing filters no longer resets the map to its default centre and zoom. Your current view is preserved so you can refine filters while staying focused on a specific area.
 
 ## Coverage Only Mode
 
